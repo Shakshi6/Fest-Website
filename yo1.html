@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Fest Website</title>
+<style>
+  /* CSS for beautiful background and other styles */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('img/pngtree-vector-technology-circle-and-technical-background-picture-image_1613793.jpg'); /* Set your beautiful background image here */
+    background-size: cover;
+    color: #fff;
+  }
+  .container {
+    padding: 20px;
+  }
+  header {
+    text-align: center;
+    padding: 10px;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  .section {
+    padding: 50px 0;
+    text-align: center;
+    height: 100vh;
+  }
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    display: none;
+  }
+  .workshop-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .workshop {
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- Header with categories -->
+  <header>
+    <h1>Welcome to Our Tech Fest</h1>
+    <nav>
+      <ul>
+        <li><a href="#workshops">WORKSHOPS</a></li>
+        <li><a href="#competitions">COMPETITIONS</a></li>
+        <li><a href="#events">EVENTS</a></li>
+        <li><a href="#techfest">Techfest</a></li>
+        <li><a href="#accommodation">ACCOMMODATION</a></li>
+        <li><a href="#store">STORE</a></li>
+        <li><a href="#register">REGISTER</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Main content sections -->
+  <div id="workshops" class="section">
+    <h2>Workshops</h2>
+    <div class="workshop-container">
+      <div class="workshop">
+        <h3>Machine Learning</h3>
+        <p>Become proficient in developing clever machine learning algorithms</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+      <div class="workshop">
+        <h3>Web 3.0</h3>
+        <p>Master the fundamentals of concepts like NFTs, dApp and Web 3.0 infrastructure</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+      <div class="workshop">
+        <h3>Python</h3>
+        <p>Master the fundamentals of writing Python scripts and using its libraries</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+      <div class="workshop">
+        <h3>Data To AI By Google</h3>
+        <p>Unlock Google Cloud's data potential with AI & gen AI in one workshop.</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+      <div class="workshop">
+        <h3>Chatgpt (Prompt Engineering)</h3>
+        <p>Master the skill of prompt engineering in the world of AI with powerful tools like ChatGPT</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+      <div class="workshop">
+        <h3>Web Development</h3>
+        <p>Learn how to make professional websites using various tools</p>
+        <button onclick="register()">Register</button>
+        <button onclick="explore()">Explore</button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="competitions" class="section">
+    <h2>Competitions</h2>
+    <!-- Competition information -->
+  </div>
+  
+  <div id="events" class="section">
+    <h2>Events</h2>
+    <!-- Event information -->
+  </div>
+  
+  <div id="techfest" class="section">
+    <h2>Techfest</h2>
+    <!-- Techfest information -->
+  </div>
+  
+  <div id="accommodation" class="section">
+    <h2>Accommodation</h2>
+    <!-- Accommodation information -->
+  </div>
+  
+  <div id="store" class="section">
+    <h2>Store</h2>
+    <!-- Store information -->
+  </div>
+  
+  <div id="register" class="section">
+    <h2>Register</h2>
+    <!-- Register information -->
+  </div>
+</div>
+
+<!-- Workshop popup -->
+<div id="workshopPopup" class="popup">
+  <h2>Workshop Details</h2>
+  <p>Description of available workshops.</p>
+  <button onclick="closePopup()">Close</button>
+</div>
+
+<!-- JavaScript for popup functionality -->
+<script>
+function showPopup() {
+  document.getElementById('workshopPopup').style.display = 'block';
+}
+
+function closePopup() {
+  document.getElementById('workshopPopup').style.display = 'none';
+}
+
+function register() {
+  alert("Register button clicked");
+}
+
+function explore() {
+  alert("Explore button clicked");
+}
+
+// Adjust scrolling behavior to occupy entire page
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</body>
+</html>
